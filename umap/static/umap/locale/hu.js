@@ -233,15 +233,12 @@ var locale = {
     "Open this map extent in a map editor to provide more accurate data to OpenStreetMap": "A térképkivágás megnyitása egy térképszerkesztőben, hogy az OpenStreetMapbe pontosabb adatokat lehessen előállítani",
     "Optional intensity property for heatmap": "Intenzitástérkép nem kötelező tulajdonsága",
     "Optional. Same as color if not set.": "Nem kötelező. Ha nincs beállítva, akkor ugyanaz, mint a szín.",
-    "Optionnal.": "Nem kötelező",
     "Override clustering radius (default 80)": "Csoportosítás sugarának felülírása (alapértelmezett: 80)",
     "Override heatmap radius (default 25)": "Intenzitástérkép sugarának felülírása (alapértelmezett: 25)",
-    "Paste here your data": "Az adatokat ide illessze be",
     "Please be sure the licence is compliant with your use.": "Győződjön meg róla, hogy a licenc megfelel a térkép felhasználásának.",
     "Please choose a format": "Válassza ki a formátumot",
     "Please enter the name of the property": "Adja meg a tulajdonság nevét",
     "Please enter the new name of this property": "Adja meg a tulajdonság új nevét",
-    "Please save the map before": "Először mentse el a térképet",
     "Powered by <a href=\"{leaflet}\">Leaflet</a> and <a href=\"{django}\">Django</a>, glued by <a href=\"{umap}\">uMap project</a>.": "Technológia: <a href=\"{leaflet}\">Leaflet</a> és <a href=\"{django}\">Django</a>, összeállító: <a href=\"{umap}\">uMap projekt</a>.",
     "Problem in the response": "Hiba a válaszban",
     "Problem in the response format": "Hiba a válasz formátumában",
@@ -271,7 +268,6 @@ var locale = {
     "Short credits": "Alkotók röviden",
     "Show/hide layer": "Réteg megjelenítése/elrejtése",
     "Simple link: [[http://example.com]]": "Egyszerű link: [[http://pelda.hu]]",
-    "Skipping unkown geometry.type: {type}": "Ismeretlen geometriatípus kihagyása: {type}",
     "Slideshow": "Diavetítés",
     "Smart transitions": "Intelligens áttűnések",
     "Sort key": "Sorba rendezéshez használt kulcs",
@@ -365,7 +361,11 @@ var locale = {
     "Popup": "Felugró",
     "Popup (large)": "Felugró (nagy)",
     "Popup content style": "Felugró tartalom stílusa",
-    "Popup shape": "Felugró ablak alakja"
+    "Popup shape": "Felugró ablak alakja",
+    "Skipping unknown geometry.type: {type}": "Skipping unknown geometry.type: {type}",
+    "Optional.": "Optional.",
+    "Paste your data here": "Paste your data here",
+    "Please save the map first": "Please save the map first"
 };
 L.registerLocale("hu", locale);
 L.setLocale("hu");

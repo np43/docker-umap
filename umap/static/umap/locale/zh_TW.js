@@ -233,15 +233,12 @@ var locale = {
     "Open this map extent in a map editor to provide more accurate data to OpenStreetMap": "在地圖編輯器中打開此地圖，提供更多準確資料給 OpenStreetMap",
     "Optional intensity property for heatmap": "選用的熱圖 heatmap 強度屬性",
     "Optional. Same as color if not set.": "可選，若您未選取顏色，則採用預設值",
-    "Optionnal.": "選填",
     "Override clustering radius (default 80)": "覆蓋群集分析半徑 (預設80)",
     "Override heatmap radius (default 25)": "覆蓋指定熱圖 heatmap 半徑 (預設 25)",
-    "Paste here your data": "在此貼入資料",
     "Please be sure the licence is compliant with your use.": "請再次確認所選的授權方式符合您的需求",
     "Please choose a format": "請選擇地圖格式",
     "Please enter the name of the property": "請輸入物件名稱",
     "Please enter the new name of this property": "請輸入新的物件名稱",
-    "Please save the map before": "請先儲存您的地圖",
     "Powered by <a href=\"{leaflet}\">Leaflet</a> and <a href=\"{django}\">Django</a>, glued by <a href=\"{umap}\">uMap project</a>.": "使用 <a href=\"{leaflet}\">Leaflet</a> 與 <a href=\"{django}\">Django</a> 技術﹐由 <a href=\"{umap}\">uMap 計畫</a> 整合。",
     "Problem in the response": "回應出現錯誤",
     "Problem in the response format": "回應的格式出現錯誤",
@@ -271,7 +268,6 @@ var locale = {
     "Short credits": "簡短工作人員名單",
     "Show/hide layer": "顯示/隱藏圖層",
     "Simple link: [[http://example.com]]": "簡單連結: [[http://example.com]]",
-    "Skipping unkown geometry.type: {type}": "略過未知的地理資料格式 geometry.type: {type}",
     "Slideshow": "投影片",
     "Smart transitions": "智慧轉換",
     "Sort key": "排序鍵",
@@ -365,7 +361,11 @@ var locale = {
     "Popup": "彈出式視窗",
     "Popup (large)": "彈出式視窗 (大)",
     "Popup content style": "彈出式視窗内容樣式",
-    "Popup shape": "彈出式視窗形狀"
+    "Popup shape": "彈出式視窗形狀",
+    "Skipping unknown geometry.type: {type}": "略過不明的 geometry.type: {type}",
+    "Optional.": "可選",
+    "Paste your data here": "請在此貼上你的資料",
+    "Please save the map first": "請先儲存地圖"
 };
 L.registerLocale("zh_TW", locale);
 L.setLocale("zh_TW");

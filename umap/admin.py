@@ -6,7 +6,14 @@ class TileLayerAdmin(admin.ModelAdmin):
     list_display = ('name', 'rank', )
     list_editable = ('rank', )
 
-admin.site.register(Map, admin.OSMGeoAdmin)
+
+class MapAdmin(admin.OSMGeoAdmin):
+    search_fields = ("name",)
+    autocomplete_fields = ("owner", "editors")
+    list_filter = ("share_status",)
+
+
+admin.site.register(Map, MapAdmin)
 admin.site.register(DataLayer)
 admin.site.register(Pictogram)
 admin.site.register(TileLayer, TileLayerAdmin)

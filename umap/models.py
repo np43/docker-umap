@@ -8,8 +8,8 @@ from django.utils.translation import ugettext_lazy as _
 from django.core.signing import Signer
 from django.template.defaultfilters import slugify
 from django.core.files.base import File
+from django.contrib.postgres.fields import JSONField
 
-from .fields import DictField
 from .managers import PublicManager
 
 
@@ -110,6 +110,7 @@ class Map(NamedModel):
     PUBLIC = 1
     OPEN = 2
     PRIVATE = 3
+    BLOCKED = 9
     EDIT_STATUS = (
         (ANONYMOUS, _('Everyone can edit')),
         (EDITORS, _('Only editors can edit')),
@@ -119,6 +120,7 @@ class Map(NamedModel):
         (PUBLIC, _('everyone (public)')),
         (OPEN, _('anyone with link')),
         (PRIVATE, _('editors only')),
+        (BLOCKED, _('blocked')),
     )
     slug = models.SlugField(db_index=True)
     description = models.TextField(blank=True, null=True, verbose_name=_("description"))
@@ -137,7 +139,7 @@ class Map(NamedModel):
     editors = models.ManyToManyField(settings.AUTH_USER_MODEL, blank=True, verbose_name=_("editors"))
     edit_status = models.SmallIntegerField(choices=EDIT_STATUS, default=OWNER, verbose_name=_("edit status"))
     share_status = models.SmallIntegerField(choices=SHARE_STATUS, default=PUBLIC, verbose_name=_("share status"))
-    settings = DictField(blank=True, null=True, verbose_name=_("settings"))
+    settings = JSONField(blank=True, null=True, verbose_name=_("settings"), default=dict)
 
     objects = models.Manager()
     public = PublicManager()
@@ -182,7 +184,9 @@ class Map(NamedModel):
         return can
 
     def can_view(self, request):
-        if self.owner is None:
+        if self.share_status == self.BLOCKED:
+            can = False
+        elif self.owner is None:
             can = True
         elif self.share_status in [self.PUBLIC, self.OPEN]:
             can = True

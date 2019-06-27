@@ -233,15 +233,12 @@ var locale = {
     "Open this map extent in a map editor to provide more accurate data to OpenStreetMap": "Avaa rajauksen mukainen alue editorissa parantaaksesi OpenStreetMapin tietosisältöä.",
     "Optional intensity property for heatmap": "Valinnainen lämpökartan vahvuusominaisuus",
     "Optional. Same as color if not set.": "Valinnainen. Sama kuin väri jos ei asetettu.",
-    "Optionnal.": "Valinnainen.",
     "Override clustering radius (default 80)": "Ohita klusterointisäde (oletus on 80)",
     "Override heatmap radius (default 25)": "Ohita lämpökartan säde (oletus on 25)",
-    "Paste here your data": "Liitä tiedot tähän",
     "Please be sure the licence is compliant with your use.": "Huomioithan että valitsemasi lisenssi on yhteensopiva käyttösi kanssa.",
     "Please choose a format": "Valitse formaatti",
     "Please enter the name of the property": "Kirjoita ominaisuuden nimi",
     "Please enter the new name of this property": "Kirjoita ominaisuuden uusi nimi",
-    "Please save the map before": "Ole hyvä ja tallenna kartta ensin",
     "Powered by <a href=\"{leaflet}\">Leaflet</a> and <a href=\"{django}\">Django</a>, glued by <a href=\"{umap}\">uMap project</a>.": "Konepellin alla hyrrää <a href=\"{leaflet}\">Leaflet</a> ja <a href=\"{django}\">Django</a>; <a href=\"{umap}\">uMap-projektin</a> kasaan liimaamana.",
     "Problem in the response": "Ongelma vastauksessa",
     "Problem in the response format": "Ongelma vastauksen muodossa",
@@ -271,7 +268,6 @@ var locale = {
     "Short credits": "Lyhyet tekijätiedot",
     "Show/hide layer": "Näytä/piilota kerros",
     "Simple link: [[http://example.com]]": "Yksinkertainen linkki: [[http://esimerkki.fi]]",
-    "Skipping unkown geometry.type: {type}": "Ohitetaan tuntematon geometry.type: {type}",
     "Slideshow": "Kuvaesitys",
     "Smart transitions": "Smart transitions",
     "Sort key": "Sort key",
@@ -365,7 +361,11 @@ var locale = {
     "Popup": "Popup",
     "Popup (large)": "Popup (large)",
     "Popup content style": "Popup content style",
-    "Popup shape": "Popup shape"
+    "Popup shape": "Popup shape",
+    "Skipping unknown geometry.type: {type}": "Skipping unknown geometry.type: {type}",
+    "Optional.": "Optional.",
+    "Paste your data here": "Paste your data here",
+    "Please save the map first": "Please save the map first"
 };
 L.registerLocale("fi", locale);
 L.setLocale("fi");
